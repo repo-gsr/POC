@@ -1,11 +1,4 @@
-http://localhost:8081/v1/rewardhttp://localhost:8081/v1/reward{
-    "userName": "Subbareddy",
-    "transactions": [
-        {
-            "totalAmount": 56
-        }
-    ]
-}# Getting Started
+# Getting Started
 
 ### Reference Documentation
 
