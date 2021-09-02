@@ -1,4 +1,11 @@
-# Getting Started
+http://localhost:8081/v1/rewardhttp://localhost:8081/v1/reward{
+    "userName": "Subbareddy",
+    "transactions": [
+        {
+            "totalAmount": 56
+        }
+    ]
+}# Getting Started
 
 ### Reference Documentation
 
@@ -15,37 +22,94 @@
 
 * In this sample the following apis were there
 
-1)  Creating Payment Plan by passing some request Body
+1)  Creating User alongo with Transaction
 
   Url :  http://localhost:8081/v1/reward
 
   Request Body : 
 
     {
-    	"totalAmount": 120
-    }
+    "userName": "Subbareddy",
+    "transactions": [
+        {
+            "totalAmount": 56
+        }
+    ]
+  }
   
   Response :   
   
      {
-		"transactionId": 2,
-		"totalAmount": 120.0,
-		"rewardPoints": 96
-     }
+    "userId": 1,
+    "userName": "Subbareddy",
+    "transaction": [
+        {
+            "transactionId": 4,
+            "totalAmount": 56.0,
+            "rewardPoints": 6
+        }
+    ]
+}
 
- 2) Get all the PaymentPlan Details  
+ 2) Get all the Users With Transaction Details  
  
   URL : http://localhost:8081/v1/reward
   
   Response :
   
   [
-     {
-		"transactionId": 2,
-		"totalAmount": 120.0,
-		"rewardPoints": 96
-     }
-  ]
+    {
+        "userId": 1,
+        "userName": "Subbareddy",
+        "transaction": [
+            {
+                "transactionId": 1,
+                "totalAmount": 56.0,
+                "rewardPoints": 6
+            }
+        ]
+    },
+    {
+        "userId": 2,
+        "userName": "Subbareddy",
+        "transaction": [
+            {
+                "transactionId": 2,
+                "totalAmount": 56.0,
+                "rewardPoints": 6
+            }
+        ]
+    },
+    {
+        "userId": 3,
+        "userName": "Subbareddy",
+        "transaction": [
+            {
+                "transactionId": 3,
+                "totalAmount": 56.0,
+                "rewardPoints": 6
+            }
+        ]
+    }
+]
+
+3) Get User Transaction by UserId
+
+   URL :  http://localhost:8081/v1/reward/2
+   
+   Response :
+   
+   {
+    "userId": 2,
+    "userName": "Subbareddy",
+    "transaction": [
+        {
+            "transactionId": 2,
+            "totalAmount": 56.0,
+            "rewardPoints": 6
+        }
+    ]
+}   
    
      
 

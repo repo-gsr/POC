@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,7 +18,9 @@ public class Transaction {
 
 	@Column(name = "totalAmount")
 	private Double totalAmount;
-	
+
+	@ManyToOne
+	private User user;
 
 	public long getRewardPoints() {
 		return rewardPoints;
