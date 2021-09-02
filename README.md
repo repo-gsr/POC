@@ -102,7 +102,7 @@ Getting Started
             "rewardPoints": 6
         }
     ]
-}   
+   }   
    
      
 
