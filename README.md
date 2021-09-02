@@ -92,17 +92,17 @@ Getting Started
    
    Response :
    
-   {
-    "userId": 2,
-    "userName": "Subbareddy",
-    "transaction": [
-        {
-            "transactionId": 2,
-            "totalAmount": 56.0,
-            "rewardPoints": 6
-        }
-    ]
-   }   
+      {
+       "userId": 2,
+       "userName": "Subbareddy",
+       "transaction": [
+           {
+               "transactionId": 2,
+               "totalAmount": 56.0,
+               "rewardPoints": 6
+           }
+       ]
+      }   
    
      
 
