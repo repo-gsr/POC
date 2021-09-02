@@ -4,15 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poc.model.Transaction;
 import com.poc.model.User;
 import com.poc.repo.TransactionRepo;
+import com.poc.rest.UserController;
 
 @Service
 public class UserService implements IUserService {
+
+	private final static Logger logger = LoggerFactory.getLogger(UserService.class);
 
 	@Autowired
 	TransactionRepo transactionRepo;
@@ -39,6 +44,7 @@ public class UserService implements IUserService {
 			transactions.add(tr);
 		}
 		user.setTransaction(transactions);
+		logger.debug("User Adding with Transaction with Rewards point " + transactions);
 
 		return transactionRepo.save(user);
 	}
