@@ -8,8 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name = "Transaction")
+@Getter @Setter
 public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,35 +22,11 @@ public class Transaction {
 
 	@Column(name = "totalAmount")
 	private Double totalAmount;
-
-	@ManyToOne
-	private User user;
-
-	public long getRewardPoints() {
-		return rewardPoints;
-	}
-
-	public void setRewardPoints(long rewardPoints2) {
-		this.rewardPoints = rewardPoints2;
-	}
-
+	
 	@Column(name = "rewardPoints", nullable = true)
 	private long rewardPoints;
 
-	public Long getTransactionId() {
-		return transactionId;
-	}
-
-	public void setTransactionId(Long transactionId) {
-		this.transactionId = transactionId;
-	}
-
-	public Double getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setTotalAmount(Double totalAmount2) {
-		this.totalAmount = totalAmount2;
-	}
+	@ManyToOne
+	private User user;
 
 }
